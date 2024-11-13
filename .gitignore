@@ -1,0 +1,5 @@
+*.py
+*.cpp
+*.pdf
+/compiled_outputs
+/logs

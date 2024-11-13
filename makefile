@@ -1,8 +1,9 @@
 # Variables
-SCRIPT = compile.sh   # Your grading script
+SCRIPT = compile.sh
 LOG_DIR = logs
 OUTPUT_DIR = compiled_outputs
 SUBMISSIONS_DIR = submissions/assigned_students
+GRADING_FILE = grading.txt
 
 run:
 	@echo "Running grading script..."
@@ -12,13 +13,15 @@ clean:
 	@echo "Cleaning up logs and compiled outputs..."
 	rm -rf $(LOG_DIR)/*
 	rm -rf $(OUTPUT_DIR)/*
-
+	rm $(GRADING_FILE)
 clean-all: clean
 	@echo "Cleaning assigned student submissions..."
 	rm -rf $(SUBMISSIONS_DIR)/*
+	rm $(GRADING_FILE)
 setup:
 	@echo "Setting up directories..."
 	mkdir -p $(LOG_DIR) $(OUTPUT_DIR) $(SUBMISSIONS_DIR)
+	touch $(GRADING_FILE)
 help:
 	@echo "Available commands:"
 	@echo "  make run         - Run the grading script"

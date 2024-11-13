@@ -42,4 +42,5 @@ The formatting should be a single student ID to identify the specific submission
 2. Run `make setup`.
 3. Copy and paste submissions zip into submissions directory.
 4. Unzip submissions zip file.
+5. Copy and paste assigned student IDs from Excel into grading.txt
 3. Run `make run`.

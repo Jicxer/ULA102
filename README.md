@@ -25,6 +25,9 @@ Use the `Makefile` to run the grading script or clean up files. The `Makefile` s
 - **`make help`**:  
   Displays available commands with descriptions.
 
+- **`make setup`**:
+  Sets up necessary directories.
+
 
 ### Input.txt
 The grading script automatically redirects input.txt, as the input for each Python file in the assigned_students directory.
@@ -34,3 +37,9 @@ The file provides default input to all Python files that require it.
 The list of student IDs for the submissions we're assigned for grading. The bash script filters the submissions to only those we're assigned to.
 The formatting should be a single student ID to identify the specific submissions for each line. Copy and paste Cell B rows from the Grading Excel Sheet onto Grading.txt.
 
+## Insturctions:
+1. Clone repository.
+2. Run `make setup`.
+3. Copy and paste submissions zip into submissions directory.
+4. Unzip submissions zip file.
+3. Run `make run`.

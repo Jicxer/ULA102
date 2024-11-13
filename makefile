@@ -16,12 +16,14 @@ clean:
 clean-all: clean
 	@echo "Cleaning assigned student submissions..."
 	rm -rf $(SUBMISSIONS_DIR)/*
-
+setup:
+	@echo "Setting up directories..."
+	mkdir -p $(LOG_DIR) $(OUTPUT_DIR) $(SUBMISSIONS_DIR)
 help:
 	@echo "Available commands:"
 	@echo "  make run         - Run the grading script"
 	@echo "  make clean       - Remove all logs and compiled outputs"
 	@echo "  make clean-all   - Remove logs, compiled outputs, and assigned student submissions"
+	@echo "  make setup       - Set up directories (logs, compiled_outputs, assigned_students)"
 	@echo "  make help        - Display this help message"
-
 .PHONY: run clean clean-all setup help

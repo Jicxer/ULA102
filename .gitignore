@@ -5,3 +5,4 @@
 /logs
 *.zip
 grading.txt
+*.out

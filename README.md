@@ -1,5 +1,5 @@
 # ULA102
-Assignment 5 ULA2 Grading
+Assignment 5 ULA2 Grading Script. Download all submissions and unzip the zip file into the submisisons folder.
 
 ## Directory Structure
     .

@@ -3,10 +3,10 @@ Assignment 5 ULA2 Grading Script. Download all submissions and unzip the zip fil
 
 ## Directory Structure
     .
-    ├── submissions/             # Directory containing all student submissions
+    ├── submissions/              # Directory containing all student submissions
     │   ├── assigned_students/    # Specific students assigned for grading
-    ├── compiled_outputs/         # Directory for storing compiled output files (C++ binaries)
-    ├── logs/                     # Directory for logs from each script's compilation and execution
+    ├── compiled_outputs/         # Directory for storing output files (C++ binaries)
+    ├── logs/                     # Directory for logs from each script's execution output
     │   ├── cpp_output_logs/      # Output logs for CPP files
     │   ├── py_logs/              # Output logs for Python files
     ├── input.txt                 # Default input file used for Python scripts requiring input

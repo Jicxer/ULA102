@@ -18,7 +18,7 @@ mkdir -p "$LOG_DIR"
 mkdir -p "$CPP_LOG_OUTPUT_DIR"
 mkdir -p "$PY_LOG_OUTPUT_DIR"
 mkdir -p "$ASSIGNED_DIR"
-mkdir -p $CPP_LOG_DIR"
+mkdir -p "$CPP_LOG_DIR"
 
 # Read IDs from the ids.txt file into an array
 mapfile -t ids < grading.txt
@@ -56,7 +56,7 @@ for FILE in "$ASSIGNED_DIR"/*; do
         OUTPUT_FILE="$OUTPUT_DIR/$USERNAME.out"
         
         if clang++ "$FILE" -o "$OUTPUT_FILE" 2> "$LOG_DIR/$USERNAME.log"; then
-            if "$OUTPUT_FILE" < "$INPUT_FILE" > "$CPP_LOG_COMPILED_DIR/${USERNAME}_output.log"; then 
+            if "$OUTPUT_FILE" < "$INPUT_FILE" > "$CPP_LOG_OUTPUT_DIR/${USERNAME}_output.log"; then 
                 successful_cpp+=("$USERNAME")
             else
                 failed_cpp+=("$USERNAME")

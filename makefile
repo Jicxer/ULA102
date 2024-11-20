@@ -1,4 +1,3 @@
-# Variables
 SCRIPT = compile.sh
 LOG_DIR = logs
 OUTPUT_DIR = compiled_outputs
@@ -14,6 +13,7 @@ clean:
 	rm -rf $(LOG_DIR)/*
 	rm -rf $(OUTPUT_DIR)/*
 clean-all: clean
+	make clean
 	@echo "Cleaning assigned student submissions..."
 	rm -rf $(SUBMISSIONS_DIR)/*
 	rm $(GRADING_FILE)

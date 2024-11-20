@@ -24,6 +24,9 @@ Use the `Makefile` to run the grading script or clean up files. The `Makefile` s
 - **`make clean`**:  
   Deletes all files in the `logs` and `compiled_outputs` directories, cleaning up all compilation outputs and log files.
 
+- **`make clean-all**:
+  Deletes all files within submissions and grading.txt
+
 - **`make help`**:  
   Displays available commands with descriptions.
 

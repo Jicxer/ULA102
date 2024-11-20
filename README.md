@@ -7,6 +7,8 @@ Assignment 5 ULA2 Grading Script. Download all submissions and unzip the zip fil
     │   ├── assigned_students/    # Specific students assigned for grading
     ├── compiled_outputs/         # Directory for storing compiled output files (C++ binaries)
     ├── logs/                     # Directory for logs from each script's compilation and execution
+    │   ├── cpp_output_logs/      # Output logs for CPP files
+    │   ├── py_logs/              # Output logs for Python files
     ├── input.txt                 # Default input file used for Python scripts requiring input
     └── grading.txt               # File containing a list of student IDs for assigned students
 
@@ -30,8 +32,10 @@ Use the `Makefile` to run the grading script or clean up files. The `Makefile` s
 
 
 ### Input.txt
-The grading script automatically redirects input.txt, as the input for each Python file in the assigned_students directory.
+The grading script automatically redirects input.txt, as the input for each Python/CPP file in the assigned_students directory.
 The file provides default input to all Python files that require it.
+Depending on their formatting, students will typically as inputs for avg wind speed, blade radius, and efficiency.
+Since the rubric requires "correct" outputs, these will vary depending on the student order of inputs.
 
 ### Grading.txt
 The list of student IDs for the submissions we're assigned for grading. The bash script filters the submissions to only those we're assigned to.

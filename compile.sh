@@ -7,7 +7,6 @@ ASSIGNED_DIR="submissions/assigned_students"
 # Directories for outputs
 OUTPUT_DIR="compiled_outputs"
 LOG_DIR="logs"
-CPP_LOG_DIR="logs/cpp_logs"
 CPP_LOG_OUTPUT_DIR="logs/cpp_output_logs"
 PY_LOG_OUTPUT_DIR="logs/py_logs"
 INPUT_FILE="input.txt"
@@ -18,7 +17,6 @@ mkdir -p "$LOG_DIR"
 mkdir -p "$CPP_LOG_OUTPUT_DIR"
 mkdir -p "$PY_LOG_OUTPUT_DIR"
 mkdir -p "$ASSIGNED_DIR"
-mkdir -p "$CPP_LOG_DIR"
 
 # Read IDs from the ids.txt file into an array
 mapfile -t ids < grading.txt

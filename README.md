@@ -9,7 +9,7 @@ Assignment 5 ULA2 Grading Script. Download all submissions and unzip the zip fil
     ├── logs/                     # Directory for logs from each script's execution output
     │   ├── cpp_output_logs/      # Output logs for CPP files
     │   ├── py_logs/              # Output logs for Python files
-    ├── input.txt                 # Default input file used for Python scripts requiring input
+    ├── input.txt                 # Default input file used for Python/CPP scripts requiring input
     └── grading.txt               # File containing a list of student IDs for assigned students
 
 ### Makefile

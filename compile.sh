@@ -7,12 +7,18 @@ ASSIGNED_DIR="submissions/assigned_students"
 # Directory to store compiled outputs and logs
 OUTPUT_DIR="compiled_outputs"
 LOG_DIR="logs"
+CPP_LOG_DIR="logs/cpp_logs"
+CPP_LOG_OUTPUT_DIR="logs/cpp_output_logs"
+PY_LOG_OUTPUT_DIR="logs/py_logs"
 INPUT_FILE="input.txt"
 
 # Create the output and log directories if they don't exist
 mkdir -p "$OUTPUT_DIR"
 mkdir -p "$LOG_DIR"
+mkdir -p "$CPP_LOG_OUTPUT_DIR"
+mkdir -p "$PY_LOG_OUTPUT_DIR"
 mkdir -p "$ASSIGNED_DIR"
+mkdir -p $CPP_LOG_DIR"
 
 # Read IDs from the ids.txt file into an array
 mapfile -t ids < grading.txt
@@ -50,13 +56,17 @@ for FILE in "$ASSIGNED_DIR"/*; do
         OUTPUT_FILE="$OUTPUT_DIR/$USERNAME.out"
         
         if clang++ "$FILE" -o "$OUTPUT_FILE" 2> "$LOG_DIR/$USERNAME.log"; then
-            successful_cpp+=("$USERNAME")
-        else
-            failed_cpp+=("$USERNAME")
+            if "$OUTPUT_FILE" < "$INPUT_FILE" > "$CPP_LOG_COMPILED_DIR/${USERNAME}_output.log"; then 
+                successful_cpp+=("$USERNAME")
+            else
+                failed_cpp+=("$USERNAME")
         fi
+    else
+        failed_cpp+=($USERNAME)
+    fi
 
     elif [ "$EXT" == "py" ]; then
-        if python "$FILE" < $INPUT_FILE >  "$LOG_DIR/$USERNAME.output" 2> "$LOG_DIR/$USERNAME.error"; then
+        if python "$FILE" < $INPUT_FILE >  "$PY_LOG_OUTPUT_DIR/$USERNAME.output" 2> "$LOG_DIR/$USERNAME.error"; then
             successful_py+=("$USERNAME")
         else
             failed_py+=("$USERNAME")

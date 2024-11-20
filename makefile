@@ -2,7 +2,7 @@
 SCRIPT = compile.sh
 LOG_DIR = logs
 OUTPUT_DIR = compiled_outputs
-SUBMISSIONS_DIR = submissions/assigned_students
+SUBMISSIONS_DIR = submissions
 GRADING_FILE = grading.txt
 
 run:
@@ -13,7 +13,6 @@ clean:
 	@echo "Cleaning up logs and compiled outputs..."
 	rm -rf $(LOG_DIR)/*
 	rm -rf $(OUTPUT_DIR)/*
-	rm $(GRADING_FILE)
 clean-all: clean
 	@echo "Cleaning assigned student submissions..."
 	rm -rf $(SUBMISSIONS_DIR)/*
